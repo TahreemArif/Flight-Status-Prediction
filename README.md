@@ -8,8 +8,31 @@ This README provides instructions to execute the Machine Learning (ML) pipeline 
 
 ---
 
-## Step 1: Data Cleaning
+## Step 1: Data Collection and Cleaning
 The first step involves cleaning the data stored in a specified bucket.
+
+### Command:
+```bash
+spark-submit \
+  --master yarn \
+  --deploy-mode client \
+  --driver-memory 4G \
+  --executor-memory 2G \
+  --num-executors 8 \
+  data_collection_and_cleaning.py \
+  --bucket <BUCKET-NAME>
+```
+
+### Description:
+- `--master yarn`: Specifies the YARN cluster as the Spark master.
+- `--deploy-mode client`: Specifies the deployment mode of spark.
+- `--driver-memory`: Allocates 4 GB of memory for the driver.
+- `--executor-memory`: Allocates 2 GB of memory for each executor.
+- `--num-executors`: Configures the number of executors to 8.
+- `ml_data_cleaning.py`: The script to clean the data.
+- `--bucket`: Specifies the bucket name containing the raw data.
+
+## Step 2: Data Cleaning
 
 ### Command:
 ```bash
