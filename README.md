@@ -32,7 +32,7 @@ spark-submit \
 - `ml_data_cleaning.py`: The script to clean the data.
 - `--bucket`: Specifies the bucket name containing the raw data.
 
-## Step 2: Data Cleaning
+## Step 2: Data Cleaning (Part II)
 
 ### Command:
 ```bash
